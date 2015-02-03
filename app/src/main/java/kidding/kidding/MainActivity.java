@@ -36,6 +36,9 @@ public class MainActivity extends Activity {
         else if(id ==R.id.action_filter){
             setContentView(R.layout.filter);
         }
+        else if(id ==R.id.action_event){
+            setContentView(R.layout.event_detail);
+        }
 
         return super.onOptionsItemSelected(item);
     }
