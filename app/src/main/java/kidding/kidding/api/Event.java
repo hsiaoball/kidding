@@ -13,6 +13,15 @@ public class Event {
     public int mCost;
     public String mContent;
     public Bitmap mImage;
+    public String mAddress;
+    public String mCity;
+    public String mState;
+    public String mZip;
+    public String mOrganizer;
+    public String mWebSite;
+    public String mParking;
+    public String mAge;
+    public String mPhone;
 
     public Event(String topic, Date time, int cost, String content, Bitmap image){
         mTopic=topic;
