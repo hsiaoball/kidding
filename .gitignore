@@ -4,3 +4,17 @@
 /.idea/libraries
 .DS_Store
 /build
+.gitignore
+.idea/misc.xml
+.idea/modules.xml
+README.md
+app/app.iml
+app/build.gradle
+app/proguard-rules.pro
+app/src/main/AndroidManifest.xml
+app/src/main/res/values/dimens.xml
+build.gradle
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+kidding.iml
