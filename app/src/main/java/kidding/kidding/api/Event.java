@@ -1,4 +1,4 @@
-package kidding.kidding;
+package kidding.kidding.api;
 
 import android.graphics.Bitmap;
 
@@ -23,11 +23,11 @@ public class Event {
     public String mAge;
     public String mPhone;
 
-    public Event(String topic, Date time, int cost, String content, Bitmap image){
+    public Event(String topic, Date time, int cost, String content){
         mTopic=topic;
         mTime=time;
         mCost=cost;
         mContent=content;
-        mImage=image;
+        //mImage=image;
     }
 }
