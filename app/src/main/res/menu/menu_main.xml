@@ -6,4 +6,8 @@
         android:orderInCategory="100" android:showAsAction="never" />
     <item android:id="@+id/action_event" android:title="event"
         android:orderInCategory="100" android:showAsAction="never" />
+    <item android:id="@+id/feed" android:title="feed"
+        android:orderInCategory="100" android:showAsAction="never" />
+    <item android:id="@+id/main" android:title="main"
+        android:orderInCategory="100" android:showAsAction="never" />
 </menu>

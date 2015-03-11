@@ -1,17 +1,22 @@
 package kidding.kidding;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
 
+    private static final String TAG ="Main" ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(TAG, "onCrete");
     }
 
 
@@ -30,16 +35,22 @@ public class MainActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        else if(id ==R.id.action_filter){
-            setContentView(R.layout.filter);
-        }
-        else if(id ==R.id.action_event){
-            setContentView(R.layout.event_detail);
-        }
+        switch (id){
+            case R.id.action_settings:
+                return true;
+            case R.id.action_filter:
+                setContentView(R.layout.filter);
 
+            case R.id.action_event:
+                setContentView(R.layout.event_detail);
+
+            case R.id.feed:
+                final Intent intentFeed= new Intent(getApplicationContext(), feed_op.class);
+                startActivity(intentFeed);
+                return true;
+            case R.id.main:
+                setContentView(R.layout.activity_main);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
