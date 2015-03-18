@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent" >
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:scrollingCache="true"
+    android:smoothScrollbar="true"
+    android:scrollbars = "vertical"
+    android:orientation = "vertical">
 
-        <ListView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/listView"
-        />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true"
+        android:scrollbars = "vertical"
+        android:id="@+id/linearLayout1"
+        android:weightSum="1">
+        <ImageView
+            android:layout_height="80dp"
+            android:id="@+id/feed_imageView1"
+            android:layout_width="100dp"
+            android:src="@drawable/b1"
+            android:layout_weight="26">
+        </ImageView>
+        <TextView android:text = "TextView"
+        android:id = "@+id/feed_textView1"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginLeft = "6dip"
+        android:layout_marginTop = "6dip"
+        android:textAppearance = "?android:attr/textAppearanceLarge">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true"
+        android:scrollbars = "vertical"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/feed_textView2"
+            android:text="TextView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall">
+        </TextView>
+
+        <TextView android:text="TextView" android:id="@+id/feed_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginLeft="6dip">
+        </TextView>
+    </LinearLayout>
+
 </LinearLayout>
