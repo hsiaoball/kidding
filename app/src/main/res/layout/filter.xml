@@ -14,6 +14,22 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:paddingTop="2dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APPLY FILTER"
+                android:id="@+id/bt_apply" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:paddingTop="26dp">
 
             <TextView
@@ -22,6 +38,9 @@
                 android:text="Time:"
                 android:id="@+id/textView"
                 android:textSize="24dp" />
+
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -33,19 +52,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weekend"
-                android:id="@+id/button" />
+                android:id="@+id/bt_time_weekend" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Weekday"
-                android:id="@+id/button2" />
+                android:id="@+id/bt_time_weekday" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="After 5"
-                android:id="@+id/button3" />
+                android:id="@+id/bt_time_after5" />
         </LinearLayout>
 
         <LinearLayout
@@ -109,26 +128,43 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ba"
-                android:id="@+id/button7" />
+                android:text="Story Time"
+                android:id="@+id/bt_type_story" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mu"
-                android:id="@+id/button8" />
+                android:text="Art"
+                android:id="@+id/bt_type_art" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="St"
-                android:id="@+id/button9" />
+                android:text="Entertainment"
+                android:id="@+id/bt_type_entertain" />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chi"
-                android:id="@+id/button10" />
+                android:text="Culture"
+                android:id="@+id/bt_type_culture" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Science"
+                android:id="@+id/bt_type_science" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport"
+                android:id="@+id/bt_type_sport" />
         </LinearLayout>
 
         <LinearLayout

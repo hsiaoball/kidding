@@ -4,19 +4,53 @@ package kidding.kidding.api;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
+import kidding.kidding.Eventfilter;
 import kidding.kidding.api.Event;
 
-public class api{
+public class Api{
+        private List<Event> mEventList;
+        private Set<Integer> mFilter;
+        public List<Event> filtedList;
 
-        public List<Event> getEvents(){
-            List<Event> eventList=new ArrayList<Event>();
-            eventList.add(new Event("Story tell"      ,new Date(1423434355156L),30,"welcome to the party"));
-            eventList.add(new Event("basket ball"     ,new Date(1424353355516L),60,"welcome to the basket ball"));
-            eventList.add(new Event("Meseum"          ,new Date(1423478355516L),70,"welcome to the Museum"));
-            eventList.add(new Event("House party"     ,new Date(1423437235556L),80,"welcome to the House"));
-            eventList.add(new Event("Park gathering"  ,new Date(1423434775546L),90,"welcome to the park"));
-            eventList.add(new Event("friends hang out",new Date(1423432451156L),20,"welcome to the friends place"));
-            return eventList;
+        public Api(){
+            mEventList=new ArrayList<Event>();
         }
+        public List<Event> getEvents(){
+
+            mEventList.add(new Event("Story tell"      , Eventfilter.TYPE_STORY,1423434355156L,30,2,10,"welcome to the party"));
+            mEventList.add(new Event("basket ball"     , Eventfilter.TYPE_SPORT,1424353355516L,60,5,20,"welcome to the basket ball"));
+            mEventList.add(new Event("Meseum"          , Eventfilter.TYPE_SCI,1423478355516L,70,2,20,"welcome to the Museum"));
+            mEventList.add(new Event("House party"     , Eventfilter.TYPE_ENTERTAIN,1423437235556L,80,6,15,"welcome to the House"));
+            mEventList.add(new Event("Park gathering"  , Eventfilter.TYPE_ART,1423434775546L,90,8,12,"welcome to the park"));
+            mEventList.add(new Event("friends hang out", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+            mEventList.add(new Event("friends hang out1", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+            mEventList.add(new Event("friends hang out2", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+            mEventList.add(new Event("friends hang out3", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+            mEventList.add(new Event("friends hang out4", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+
+
+            return mEventList;
+        }
+
+        public void applyFilter(){
+
+        }
+        public Set<Integer> getFilterSet(){
+            return mFilter;
+        }
+
+        public void AddFilter(int input){
+            mFilter.add(input);
+        }
+
+        public void removeFilter(int input){
+            mFilter.remove(input);
+        }
+
+    public boolean checkFilter(int input){
+        return mFilter.contains(input);
+    }
+
 }

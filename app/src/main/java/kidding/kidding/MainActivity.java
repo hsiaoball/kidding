@@ -17,6 +17,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCrete");
+        final Intent intentFeed= new Intent(getApplicationContext(), feed_op.class);
+        startActivity(intentFeed);
     }
 
 

@@ -1,9 +1,8 @@
 package kidding.kidding;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.ListActivity;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
@@ -12,10 +11,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.view.View;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
+import kidding.kidding.api.Api;
+import kidding.kidding.api.Event;
 
 /**
  * Created by Vicky on 3/10/15.
@@ -27,15 +29,19 @@ public class feed_op extends ListActivity {
     private ArrayAdapter<String> listAdapter;
     private SimpleAdapter adapter;
     private TextView textView1;
+    private ListView eventListView;
+    private Api mApi;
+    private List<Event> mEventList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mApi=new Api();
+        mEventList=mApi.getEvents();
         for (int i=0; i<event_list.length; i++) {
             HashMap<String,Object> item = new HashMap<String,Object>();
             item.put( "Pic", pic_list[i]);
-            item.put( "Event", event_list[i]);
+            item.put( "Event", mEventList.get(i).mTopic);
             item.put( "Time", time_list[i] );
 
             feed_list.add( item );
@@ -65,10 +71,26 @@ public class feed_op extends ListActivity {
                             new int[] { R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2 } );
 
         setListAdapter( adapter );
-        getListView().setTextFilterEnabled(true);
-        getListView().scrollBy(0, 7);
+        eventListView =getListView();
+        eventListView.setTextFilterEnabled(true);
+        eventListView.scrollBy(0, 7);
+        eventListView.setOnItemClickListener(
+                new OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> arg0, View view,
+                                            int position, long id) {
+                        Log.i(TAG, "onItemClick position:" + position);
+                        Intent intent = new Intent(getApplicationContext(), EventDetail.class);
+                        intent.putExtra("event", mEventList.get(position));
+                        startActivity(intent);
+                    }
+                }
+        );
+
         //textView1 = (TextView)findViewById(R.id.feed_imageView1);
         //textView1.setMovementMethod(new ScrollingMovementMethod());
+
     }
 
 
@@ -89,5 +111,7 @@ public class feed_op extends ListActivity {
             R.drawable.b1, R.drawable.b1, R.drawable.b1, R.drawable.b1,
             R.drawable.b1, R.drawable.b1, R.drawable.b1
     };
+
+
 
 }
