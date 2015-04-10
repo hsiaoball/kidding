@@ -1,9 +1,12 @@
 package kidding.kidding;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import kidding.kidding.api.Event;
@@ -12,14 +15,18 @@ import kidding.kidding.api.Event;
 public class EventDetail extends Activity {
     private Event mEvent;
     private TextView mTvTopic;
+    private ImageView mIvBig;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_detail);
+        setContentView(R.layout.event_detail);
         Bundle b=getIntent().getExtras();
         mEvent=b.getParcelable("event");
         mTvTopic=(TextView) findViewById(R.id.tv_topic);
         mTvTopic.setText(mEvent.mTopic);
+        mIvBig=(ImageView) findViewById(R.id.image_big);
+        if(mIvBig!=null)
+            mIvBig.setImageResource(mEvent.mPic);
 
     }
 

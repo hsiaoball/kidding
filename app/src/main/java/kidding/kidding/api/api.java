@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 import kidding.kidding.Eventfilter;
+import kidding.kidding.R;
 import kidding.kidding.api.Event;
 
 public class Api{
@@ -19,16 +20,16 @@ public class Api{
         }
         public List<Event> getEvents(){
 
-            mEventList.add(new Event("Story tell"      , Eventfilter.TYPE_STORY,1423434355156L,30,2,10,"welcome to the party"));
-            mEventList.add(new Event("basket ball"     , Eventfilter.TYPE_SPORT,1424353355516L,60,5,20,"welcome to the basket ball"));
-            mEventList.add(new Event("Meseum"          , Eventfilter.TYPE_SCI,1423478355516L,70,2,20,"welcome to the Museum"));
-            mEventList.add(new Event("House party"     , Eventfilter.TYPE_ENTERTAIN,1423437235556L,80,6,15,"welcome to the House"));
-            mEventList.add(new Event("Park gathering"  , Eventfilter.TYPE_ART,1423434775546L,90,8,12,"welcome to the park"));
-            mEventList.add(new Event("friends hang out", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
-            mEventList.add(new Event("friends hang out1", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
-            mEventList.add(new Event("friends hang out2", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
-            mEventList.add(new Event("friends hang out3", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
-            mEventList.add(new Event("friends hang out4", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place"));
+            mEventList.add(new Event("Story tell"      , Eventfilter.TYPE_STORY,1423434355156L,30,2,10,"welcome to the party", R.drawable.aa1));
+            mEventList.add(new Event("basket ball"     , Eventfilter.TYPE_SPORT,1424353355516L,60,5,20,"welcome to the basket ball",R.drawable.b1));
+            mEventList.add(new Event("Meseum"          , Eventfilter.TYPE_SCI,1423478355516L,70,2,20,"welcome to the Museum",R.drawable.aa1));
+            mEventList.add(new Event("House party"     , Eventfilter.TYPE_ENTERTAIN,1423437235556L,80,6,15,"welcome to the House",R.drawable.aa1));
+            mEventList.add(new Event("Park gathering"  , Eventfilter.TYPE_ART,1423434775546L,90,8,12,"welcome to the park",R.drawable.aa1));
+            mEventList.add(new Event("friends hang out", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place",R.drawable.aa1));
+            mEventList.add(new Event("friends hang out1", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place",R.drawable.aa1));
+            mEventList.add(new Event("friends hang out2", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place",R.drawable.aa1));
+            mEventList.add(new Event("friends hang out3", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place",R.drawable.aa1));
+            mEventList.add(new Event("friends hang out4", Eventfilter.TYPE_CULTURE,1423432451156L,20,3,18,"welcome to the friends place",R.drawable.aa1));
 
 
             return mEventList;

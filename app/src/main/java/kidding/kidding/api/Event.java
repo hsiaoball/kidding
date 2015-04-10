@@ -1,6 +1,7 @@
 package kidding.kidding.api;
 
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -26,8 +27,9 @@ public class Event implements Parcelable {
     public int mMinAge;
     public int mMaxAge;
     public String mPhone;
+    public int mPic;
 
-    public Event(String topic, int type, Long time, int cost, int minAge, int maxAge, String content) {
+    public Event(String topic, int type, Long time, int cost, int minAge, int maxAge, String content, int pic) {
         mTopic = topic;
         mType = type;
         mTime = new Date(time);
@@ -35,6 +37,7 @@ public class Event implements Parcelable {
         mContent = content;
         mMaxAge = maxAge;
         mMinAge = minAge;
+        mPic= pic;
         //mImage=image;
     }
 
@@ -52,6 +55,7 @@ public class Event implements Parcelable {
         parcel.writeInt(mMinAge);
         parcel.writeInt(mMaxAge);
         parcel.writeString(mContent);
+        parcel.writeInt(mPic);
 
     }
 
@@ -64,7 +68,8 @@ public class Event implements Parcelable {
                     source.readInt(),
                     source.readInt(),
                     source.readInt(),
-                    source.readString()
+                    source.readString(),
+                    source.readInt()
             );
         }
 
