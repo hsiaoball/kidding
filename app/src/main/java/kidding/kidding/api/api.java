@@ -10,12 +10,12 @@ import kidding.kidding.Eventfilter;
 import kidding.kidding.R;
 import kidding.kidding.api.Event;
 
-public class Api{
+public class api {
         private List<Event> mEventList;
         private Set<Integer> mFilter;
         public List<Event> filtedList;
 
-        public Api(){
+        public api(){
             mEventList=new ArrayList<Event>();
         }
         public List<Event> getEvents(){

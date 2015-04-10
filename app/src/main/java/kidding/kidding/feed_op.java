@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import kidding.kidding.api.Api;
+import kidding.kidding.api.api;
 import kidding.kidding.api.Event;
 
 /**
@@ -30,13 +30,13 @@ public class feed_op extends ListActivity {
     private SimpleAdapter adapter;
     private TextView textView1;
     private ListView eventListView;
-    private Api mApi;
+    private api mApi;
     private List<Event> mEventList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mApi=new Api();
+        mApi=new api();
         mEventList=mApi.getEvents();
         for (int i=0; i<event_list.length; i++) {
             HashMap<String,Object> item = new HashMap<String,Object>();

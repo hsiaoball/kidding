@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import kidding.kidding.api.Api;
+import kidding.kidding.api.api;
 
 import java.util.Set;
 
@@ -35,7 +35,7 @@ public class Eventfilter extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filter);
         Log.i(TAG, "onCrete");
-        final Api mApi=new Api();
+        final api mApi=new api();
         final Button btApplyFilter= (Button) findViewById(R.id.bt_apply);
         btApplyFilter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
