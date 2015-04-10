@@ -40,7 +40,7 @@ public class feed_op extends ListActivity {
         mEventList=mApi.getEvents();
         for (int i=0; i<event_list.length; i++) {
             HashMap<String,Object> item = new HashMap<String,Object>();
-            item.put( "Pic", pic_list[i]);
+            item.put( "Pic", mEventList.get(i).mPic);
             item.put( "Event", mEventList.get(i).mTopic);
             item.put( "Time", time_list[i] );
             item.put( "Place", place_list[i] );
