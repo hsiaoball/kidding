@@ -13,6 +13,7 @@
         android:scrollingCache="true"
         android:smoothScrollbar="true"
         android:scrollbars = "vertical"
+        android:orientation="horizontal"
         android:id="@+id/linearLayout1"
         android:weightSum="1">
         <ImageView
@@ -23,13 +24,40 @@
             android:layout_weight="26">
         </ImageView>
         <TextView android:text = "TextView"
-        android:id = "@+id/feed_textView1"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:layout_marginLeft = "6dip"
-        android:layout_marginTop = "6dip"
-        android:textAppearance = "?android:attr/textAppearanceLarge">
+            android:id = "@+id/feed_textView1"
+            android:layout_width = "fill_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "6dip"
+            android:layout_marginTop = "6dip"
+            android:textAppearance = "?android:attr/textAppearanceLarge">
         </TextView>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/linearLayout3"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-75dp"
+            android:layout_marginTop="30dp">
+        <TextView android:text="Time"
+            android:id="@+id/feed_textView2"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge">
+        </TextView>
+        </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/linearLayout4"
+                android:orientation="horizontal"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginTop="60dp">
+        <TextView android:text = "Place"
+            android:id = "@+id/feed_textView3"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:textAppearance = "?android:attr/textAppearanceLarge">
+        </TextView>
+            </LinearLayout>
     </LinearLayout>
 
     <LinearLayout android:layout_height="wrap_content"
@@ -38,19 +66,16 @@
         android:scrollingCache="true"
         android:smoothScrollbar="true"
         android:scrollbars = "vertical"
-        android:orientation="horizontal">
-        <TextView android:id="@+id/feed_textView2"
-            android:text="TextView"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall">
-        </TextView>
+        android:orientation="horizontal"
+        android:weightSum="1">
 
-        <TextView android:text="TextView" android:id="@+id/feed_textView3"
+        <TextView android:text="Details"
+            android:id="@+id/feed_textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:layout_marginLeft="6dip">
+            android:layout_marginLeft="125dip"
+            android:layout_weight="20">
         </TextView>
     </LinearLayout>
 

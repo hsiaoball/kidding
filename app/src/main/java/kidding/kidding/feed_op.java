@@ -43,6 +43,7 @@ public class feed_op extends ListActivity {
             item.put( "Pic", pic_list[i]);
             item.put( "Event", mEventList.get(i).mTopic);
             item.put( "Time", time_list[i] );
+            item.put( "Place", place_list[i] );
 
             feed_list.add( item );
         }
@@ -67,11 +68,11 @@ public class feed_op extends ListActivity {
                             this,
                             feed_list,
                             R.layout.feed,
-                            new String[] { "Pic","Event","Time" },
-                            new int[] { R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2 } );
+                            new String[] { "Pic","Event","Time", "Place" },
+                            new int[] { R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2, R.id.feed_textView3 } );
 
         setListAdapter( adapter );
-        eventListView =getListView();
+        eventListView = getListView();
         eventListView.setTextFilterEnabled(true);
         eventListView.scrollBy(0, 7);
         eventListView.setOnItemClickListener(
