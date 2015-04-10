@@ -108,8 +108,8 @@ public class feed_op extends ListActivity {
     };
 
     private static final int[] pic_list = new int[]{
-            R.drawable.b1, R.drawable.b1, R.drawable.b1, R.drawable.b1,
-            R.drawable.b1, R.drawable.b1, R.drawable.b1
+            R.drawable.b1, R.drawable.sport1, R.drawable.museum1, R.drawable.party1,
+            R.drawable.music1, R.drawable.picnic1, R.drawable.art1
     };
 
 
