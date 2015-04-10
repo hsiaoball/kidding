@@ -43,9 +43,6 @@ public class MainActivity extends Activity {
             case R.id.action_filter:
                 setContentView(R.layout.filter);
 
-            case R.id.action_event:
-                setContentView(R.layout.event_detail);
-
             case R.id.feed:
                 final Intent intentFeed= new Intent(getApplicationContext(), feed_op.class);
                 startActivity(intentFeed);
