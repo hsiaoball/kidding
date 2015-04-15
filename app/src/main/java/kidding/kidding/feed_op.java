@@ -1,9 +1,11 @@
 package kidding.kidding;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -32,6 +34,7 @@ public class feed_op extends ListActivity {
     private ListView eventListView;
     private api mApi;
     private List<Event> mEventList;
+    private ImageButton imageButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,8 @@ public class feed_op extends ListActivity {
             feed_list.add( item );
         }
 
+
+        //addListenerOnButton();
 
         //setContentView(R.layout.feed);
         //Log.i(TAG,"onCrate");
@@ -68,7 +73,7 @@ public class feed_op extends ListActivity {
                             this,
                             feed_list,
                             R.layout.feed,
-                            new String[] { "Pic","Event","Place", "Time" },
+                            new String[] { "Pic","Event","Time", "Place" },
                             new int[] { R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2, R.id.feed_textView3 } );
 
         setListAdapter( adapter );
@@ -88,6 +93,17 @@ public class feed_op extends ListActivity {
                     }
                 }
         );
+/*
+        public void addListenerOnButton() {
+            imageButton = (ImageButton) findViewById(R.id.imageButton1);
+            imageButton.setOnClickListener(new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+                    Toast.makeText(MyAndroidAppActivity.this,
+                            "ImageButton is clicked!", Toast.LENGTH_SHORT).show();
+                }
+            });
+        };*/
 
         //textView1 = (TextView)findViewById(R.id.feed_imageView1);
         //textView1.setMovementMethod(new ScrollingMovementMethod());
