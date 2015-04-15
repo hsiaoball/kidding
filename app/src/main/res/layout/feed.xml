@@ -5,6 +5,7 @@
     android:scrollingCache="true"
     android:smoothScrollbar="true"
     android:scrollbars = "vertical"
+    android:descendantFocusability="blocksDescendants"
     android:orientation = "vertical">
 
     <LinearLayout
@@ -73,7 +74,35 @@
                 android:layout_marginBottom="6dp">
             </TextView>
         </LinearLayout>
-
+        <LinearLayout android:layout_height="100dp"
+            android:layout_width="85dp"
+            android:id="@+id/linearLayout3"
+            android:orientation="vertical"
+            android:layout_weight="0.3"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp">
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="25dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bm1"
+                android:text="Like"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp">
+            </ImageButton>
+            <TextView android:text="2.5 Miles"
+                android:id="@+id/feed_textView4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginLeft="6dip"
+                android:textSize="14sp"
+                android:textColor="#65655f"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal|bottom"
+                android:layout_marginBottom="12dp">
+            </TextView>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

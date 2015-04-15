@@ -1,6 +1,5 @@
 package kidding.kidding;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.ListActivity;
@@ -13,6 +12,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.view.View;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,25 +35,24 @@ public class feed_op extends ListActivity {
     private ListView eventListView;
     private api mApi;
     private List<Event> mEventList;
-    private ImageButton imageButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mApi=new api();
-        mEventList=mApi.getEvents();
-        for (int i=0; i<event_list.length; i++) {
-            HashMap<String,Object> item = new HashMap<String,Object>();
-            item.put( "Pic", mEventList.get(i).mPic);
-            item.put( "Event", mEventList.get(i).mTopic);
-            item.put( "Time", time_list[i] );
-            item.put( "Place", place_list[i] );
+        mApi = new api();
+        mEventList = mApi.getEvents();
 
-            feed_list.add( item );
+        for (int i = 0; i < event_list.length; i++) {
+            HashMap<String, Object> item = new HashMap<String, Object>();
+            item.put("Pic", mEventList.get(i).mPic);
+            item.put("Event", mEventList.get(i).mTopic);
+            item.put("Place", place_list[i]);
+            item.put("Time", time_list[i]);
+            item.put("Distance", dis_list[0]);
+
+            feed_list.add(item);
         }
 
-
-        //addListenerOnButton();
 
         //setContentView(R.layout.feed);
         //Log.i(TAG,"onCrate");
@@ -70,13 +70,13 @@ public class feed_op extends ListActivity {
 
 
         adapter = new SimpleAdapter(
-                            this,
-                            feed_list,
-                            R.layout.feed,
-                            new String[] { "Pic","Event","Time", "Place" },
-                            new int[] { R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2, R.id.feed_textView3 } );
+                this,
+                feed_list,
+                R.layout.feed,
+                new String[]{"Pic", "Event", "Place", "Time", "Distance"},
+                new int[]{R.id.feed_imageView1, R.id.feed_textView1, R.id.feed_textView2, R.id.feed_textView3, R.id.feed_textView4});
 
-        setListAdapter( adapter );
+        setListAdapter(adapter);
         eventListView = getListView();
         eventListView.setTextFilterEnabled(true);
         eventListView.scrollBy(0, 7);
@@ -93,23 +93,16 @@ public class feed_op extends ListActivity {
                     }
                 }
         );
-/*
-        public void addListenerOnButton() {
-            imageButton = (ImageButton) findViewById(R.id.imageButton1);
-            imageButton.setOnClickListener(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(View arg0) {
-                    Toast.makeText(MyAndroidAppActivity.this,
-                            "ImageButton is clicked!", Toast.LENGTH_SHORT).show();
-                }
-            });
-        };*/
-
         //textView1 = (TextView)findViewById(R.id.feed_imageView1);
         //textView1.setMovementMethod(new ScrollingMovementMethod());
+/*
+        ImageButton imageButton = (ImageButton)findViewById(R.id.imageButton1);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
+            }
+        });*/
     }
-
 
 
     private static final String[] event_list = new String[] {
@@ -129,6 +122,11 @@ public class feed_op extends ListActivity {
             R.drawable.music1, R.drawable.picnic1, R.drawable.art1
     };
 
+    private static final String[] dis_list = new String[] {
+            "2.5 Miles"
+    };
 
-
+    private static final int[] bookmark_list = new int[]{
+            R.drawable.bm1
+    };
 }
