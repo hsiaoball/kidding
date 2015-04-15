@@ -20,7 +20,7 @@ public class api {
         }
         public List<Event> getEvents(){
 
-            mEventList.add(new Event("Story tell"      , Eventfilter.TYPE_STORY,1423434355156L,30,2,10,"welcome to the party", R.drawable.aa1));
+            mEventList.add(new Event(" Viva La Comida! Bilingual Cooking and Culture Class with Marinette Tovar"      , Eventfilter.TYPE_STORY,1423434355156L,30,2,10,"Come and create meals with a focus on learning and culture for young children. Marinette Tovar shares stories from her culinary upbringing in Mexico while teaching about the traditional foods and culture in Latin cooking. Kids will get to create, get messy with tasty meals such as guacamole, salsas, enchiladas and more. Please register in advance to help us ensure we have enough delicious food for everyone that comes (limit 12 children per class so register early!)", R.drawable.aa1));
             mEventList.add(new Event("basket ball"     , Eventfilter.TYPE_SPORT,1424353355516L,60,5,20,"welcome to the basket ball",R.drawable.b1));
             mEventList.add(new Event("Meseum"          , Eventfilter.TYPE_SCI,1423478355516L,70,2,20,"welcome to the Museum",R.drawable.sport1));
             mEventList.add(new Event("House party"     , Eventfilter.TYPE_ENTERTAIN,1423437235556L,80,6,15,"welcome to the House",R.drawable.museum1));

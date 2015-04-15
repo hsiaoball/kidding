@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="detail_bt_pink">#f8b0b0</drawable>
+    <drawable name="detail_bt_red">#f26d61</drawable>
+
+</resources>

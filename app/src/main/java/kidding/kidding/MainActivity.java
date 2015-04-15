@@ -41,14 +41,16 @@ public class MainActivity extends Activity {
             case R.id.action_settings:
                 return true;
             case R.id.action_filter:
-                setContentView(R.layout.filter);
-
+                final Intent intentFilter= new Intent(getApplicationContext(), Eventfilter.class);
+                startActivity(intentFilter);
+                return true;
             case R.id.feed:
                 final Intent intentFeed= new Intent(getApplicationContext(), feed_op.class);
                 startActivity(intentFeed);
                 return true;
             case R.id.main:
                 setContentView(R.layout.activity_main);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

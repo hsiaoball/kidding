@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import kidding.kidding.api.Event;
 
 public class EventDetail extends Activity {
     private Event mEvent;
-    private TextView mTvTopic;
+    private TextView mTvTopic, mTvContent;
     private ImageView mIvBig;
     private Button mJoinBtn, mSaveBtn, mShareBtn;
     @Override
@@ -26,11 +27,22 @@ public class EventDetail extends Activity {
         mEvent=b.getParcelable("event");
         mTvTopic=(TextView) findViewById(R.id.tv_topic);
         mTvTopic.setText(mEvent.mTopic);
+        mTvContent=(TextView) findViewById(R.id.tv_content);
+        mTvContent.setText(mEvent.mContent);
+
         mIvBig=(ImageView) findViewById(R.id.image_big);
         if(mIvBig!=null)
             mIvBig.setImageResource(mEvent.mPic);
 
         mJoinBtn=(Button) findViewById(R.id.joinButton);
+        mJoinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                mJoinBtn.setBackgroundColor(0xf26d60);
+
+            }
+        });
+
 
     }
 

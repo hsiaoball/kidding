@@ -7,14 +7,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="topic"
-        android:id="@+id/tv_topic" />
+        android:id="@+id/tv_topic"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:padding="20dp" />
 
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/image_big"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp" />
+        android:layout_margin="20dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -23,28 +26,44 @@
         android:layout_gravity="center_horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:text="Join"
+            android:textColor="#ffffff"
             android:id="@+id/joinButton"
             android:enabled="true"
-            android:background="#f7afb0"
+            android:background="@drawable/custom_btn"
             android:padding="4dp" />
 
+        <TextView
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:text="     " />
+
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:text="Save"
+            android:textColor="#ffffff"
             android:id="@+id/saveButton"
-            android:background="#f7afb0"
+            android:background="@drawable/custom_btn"
             android:padding="4dp" />
 
+        <TextView
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:text="     "
+            android:id="@+id/textView7" />
+
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
             android:text="Share"
+            android:textColor="#ffffff"
             android:id="@+id/sharebutton"
-            android:background="#f7afb0"
+            android:background="@drawable/custom_btn"
             android:padding="4dp" />
     </LinearLayout>
 
@@ -52,5 +71,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Text"
-        android:id="@+id/textView5" />
+        android:id="@+id/tv_content"
+        android:padding="20dp" />
 </LinearLayout>
