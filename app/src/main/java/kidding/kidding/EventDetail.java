@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class EventDetail extends Activity {
     private Event mEvent;
     private TextView mTvTopic;
     private ImageView mIvBig;
+    private Button mJoinBtn, mSaveBtn, mShareBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,8 @@ public class EventDetail extends Activity {
         mIvBig=(ImageView) findViewById(R.id.image_big);
         if(mIvBig!=null)
             mIvBig.setImageResource(mEvent.mPic);
+
+        mJoinBtn=(Button) findViewById(R.id.joinButton);
 
     }
 
